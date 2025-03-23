@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/pretendard/dist/web/variable/pretendardvariable.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -57,4 +59,159 @@ select {
   outline: none;
   border: none;
   background: none;
+}
+
+/* Theme */
+
+@theme {
+  --primary: #ff7900;
+  --primarylight: #ffd27f;
+  --primarydark: #cc5a00;
+  --primaryaccent: #ff8533;
+
+  --secondary: #333333;
+  --secondarylight: #4d4d4d;
+
+  --white: #ffffff;
+  --black: #1a1a1a;
+
+  --pink100: #fff8f5;
+  --pink200: #fbe9e7;
+
+  --gray50: #f5f5f5;
+  --gray100: #f7f7f7;
+  --gray200: #f0f4f8;
+  --gray300: #666666;
+  --gray400: #333333;
+
+  --orange100: #fde6d6;
+  --orange200: #fff1e6;
+  --orange300: #fff3e0;
+  --orange400: #fae3c6;
+
+  --textlight: #fffff0;
+  --textdark: #1a1a1a;
+}
+
+/* bg & text */
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.hover\:text-primary:hover {
+  color: var(--primary);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+/* font */
+.title56 {
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 67px;
+  letter-spacing: -1%;
+}
+
+.title24 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -1%;
+}
+
+.text17 {
+  font-size: 17px;
+  line-height: auto;
+  letter-spacing: -2%;
+}
+
+.text12 {
+  font-size: 12px;
+  line-height: auto;
+  letter-spacing: -3%;
+}
+
+.text20 {
+  font-size: 20px;
+  line-height: auto;
+  letter-spacing: -2%;
+}
+
+.textBold20 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: auto;
+  letter-spacing: -2%;
+}
+
+.text12 {
+  font-size: 12px;
+  line-height: auto;
+  letter-spacing: -2%;
+}
+
+.subTitle28 {
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -2%;
+}
+
+.subTitle17 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: -3%;
+}
+
+.subTitleBold28 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: -2%;
+}
+
+.subTitleBold36 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+  letter-spacing: -2%;
+}
+
+.subTitleBold12 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: auto;
+  letter-spacing: -3%;
+}
+
+/* Utility */
+
+@utility container {
+  padding: 15px;
+  margin: auto;
+  max-width: 1280px;
+}
+
+@utility center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
