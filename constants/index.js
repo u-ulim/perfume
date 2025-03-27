@@ -39,12 +39,10 @@ export const mainSlides = [
   },
 ];
 
-// BestSellers
+// BestSellers Section
 import bestSellerImg01 from "@/src/assets/home/bestSellerSection/bestSeller01.jpg";
-
 import bestSellerImg02 from "@/src/assets/home/bestSellerSection/bestSeller02.jpg";
 import bestSellerImg03 from "@/src/assets/home/bestSellerSection/bestSeller03.jpg";
-
 export const bestSellers = [
   {
     title: "향수 프로그램 맞춤 스킨케어 세트",
@@ -67,4 +65,11 @@ export const bestSellers = [
     src: "#",
     discount: "15",
   },
+];
+
+// Brand Section
+export const Brands = [
+  { id: 1, name: "Brand A", image: "/path/to/image1.png" },
+  { id: 2, name: "Brand B", image: "/path/to/image2.png" },
+  { id: 3, name: "Brand C", image: "/path/to/image3.png" },
 ];
