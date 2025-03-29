@@ -8,9 +8,9 @@ export const LoginBar = () => {
       <Link href="/login">LOGIN/JOIN US</Link>
       <Link href="/mybag">BAG-0</Link>
       <Link href="/user">
-        <i>icon</i>
+        <i>user</i>
       </Link>
-      <i>icon</i>
+      <i>cart</i>
     </div>
   );
 };
