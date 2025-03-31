@@ -31,6 +31,7 @@ export const Review = () => {
         <SwiperSlide>Slide 6</SwiperSlide>
         <SwiperSlide>Slide 7</SwiperSlide>
         <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
         <div className="swiper-button-next"></div>
         <div className="swiper-button-prev"></div>
       </Swiper>
