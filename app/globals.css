@@ -6,6 +6,10 @@
 
 @import "tailwindcss";
 
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
 /* Global Reset */
 * {
   margin: 0;
@@ -214,4 +218,21 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* slides */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ff0000; /* 버튼 색상 */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 24px; /* 버튼 크기 */
+}
+
+.swiper-button-disabled {
+  opacity: 0.35; /* 비활성 버튼 투명도 */
+  cursor: auto;
+  pointer-events: none;
 }

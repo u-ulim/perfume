@@ -6,7 +6,10 @@ import Image from "next/image";
 export const BestSeller = () => {
   return (
     <section className="container relative">
-      <h1 className="center title56 mb-[40px]">BEST SELLER</h1>
+      <h1 className="center title56">BEST SELLER</h1>
+      <h2 className="center text12 mb-[40px]">
+        가장 많이 팔렸던 향수들을 만나보세요.
+      </h2>
       <div className="flex gap-[120px]">
         {bestSellers.map((item, index) => {
           // 할인된 가격 계산: 할인율: discount
