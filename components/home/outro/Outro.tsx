@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 import Image from "next/image";
@@ -11,11 +9,14 @@ import { reviews } from "@/constants";
 
 import { ReviewStar } from "@/components/icon/icon";
 
-export const Review = () => {
+export const Outro = () => {
   return (
-    <section className="container relative">
-      <h1 className="center title56">REVIEW</h1>
-      <h2 className="center text12 mb-[40px]">다양한 후기들을 만나보세요.</h2>
+    <section className="container">
+      <h1 className="center title56">취향 가이드,</h1>
+      <h2 className="center text12 mb-[40px]">
+        가장 많이 팔렸던 향수들을 만나보세요.
+      </h2>
+
       <Swiper
         modules={[Navigation]}
         navigation={{
