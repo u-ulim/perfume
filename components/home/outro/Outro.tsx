@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import Image from "next/image";
@@ -16,22 +18,23 @@ export const Outro = () => {
       <h2 className="center text12 mb-[40px]">
         가장 많이 팔렸던 향수들을 만나보세요.
       </h2>
-
       <Swiper
-        modules={[Navigation]}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
+        modules={[Pagination]}
+        // navigation={{
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // }}
         spaceBetween={10}
-        slidesPerView={6}
-        pagination={{ clickable: true }}
+        slidesPerView={2.4}
+        // centeredSlides={true}
+        pagination={{ el: ".custom-pagination", clickable: true }}
         autoplay={{ delay: 2500 }}
         loop
+        grabCursor={true}
       >
         {reviews.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="w-[100%] h-[12vw] relative mb-[6px]">
+            <div className="w-[100%] h-[29vw] relative mb-[6px]">
               <Image
                 src={item.img}
                 alt={item.title}
@@ -65,9 +68,10 @@ export const Outro = () => {
             <p className="text12 text-gray-400">{item.date}</p>
           </SwiperSlide>
         ))}
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
+        {/* <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div> */}
       </Swiper>
+      <div className="custom-pagination mt-6 center"></div>
     </section>
   );
 };

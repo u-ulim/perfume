@@ -13,17 +13,14 @@ export const BestSeller = () => {
       <div className="flex gap-[120px]">
         {bestSellers.map((item, index) => {
           // 할인된 가격 계산: 할인율: discount
-
           const rawPrice = item.price
             .replace("원", "") // "44,900"으로 만듦
             .replaceAll(",", ""); // "44900"으로 만듦
           const priceNumber = Number(rawPrice); // 44900 (숫자)
-
           const discountNumber = Number(item.discount); // 예: 15
           const discountedPrice = Math.round(
             (priceNumber * (100 - discountNumber)) / 100
           );
-
           const formattedPrice = discountedPrice.toLocaleString(); // "38,165" 등
 
           return (
