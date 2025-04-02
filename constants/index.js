@@ -167,3 +167,35 @@ export const Brands = [
   { id: 2, name: "Brand B", image: "/path/to/image2.png" },
   { id: 3, name: "Brand C", image: "/path/to/image3.png" },
 ];
+
+// Outro Section
+import outroImg01 from "@/src/assets/outro/outro01.jpg";
+import outroImg02 from "@/src/assets/outro/outro02.jpg";
+import outroImg03 from "@/src/assets/outro/outro03.jpg";
+import outroImg04 from "@/src/assets/outro/outro04.jpg";
+export const outros = [
+  {
+    id: 1,
+    miniTitle: "짧은 봄 200% 누리는 방법",
+    title: "이제 봄옷 꺼낼 때 이 향수도 챙겨주세요",
+    img: `${outroImg01.src}`,
+  },
+  {
+    id: 2,
+    miniTitle: "센스 만점 애인은 꼭 볼 것",
+    title: "애인에게 공유해볼까요? 선물 받고 싶은 향수",
+    img: `${outroImg02.src}`,
+  },
+  {
+    id: 3,
+    miniTitle: "직원들의 추억 소환",
+    title: "달콤한 사랑의 추억이 녹아 있는 향수",
+    img: `${outroImg03.src}`,
+  },
+  {
+    id: 4,
+    miniTitle: "친구랑 안 겹치는 향수!",
+    title: "새내기의 봄을 위한 10만 원 이하 향수",
+    img: `${outroImg04.src}`,
+  },
+];

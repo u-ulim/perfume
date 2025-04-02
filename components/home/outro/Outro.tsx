@@ -11,6 +11,8 @@ import { reviews } from "@/constants";
 
 import { ReviewStar } from "@/components/icon/icon";
 
+import { outros } from "@/constants";
+
 export const Outro = () => {
   return (
     <section className="container">
@@ -25,16 +27,16 @@ export const Outro = () => {
         //   prevEl: ".swiper-button-prev",
         // }}
         spaceBetween={10}
-        slidesPerView={2.4}
+        slidesPerView={3.4}
         // centeredSlides={true}
         pagination={{ el: ".custom-pagination", clickable: true }}
         autoplay={{ delay: 2500 }}
         loop
         grabCursor={true}
       >
-        {reviews.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="w-[100%] h-[29vw] relative mb-[6px]">
+        {outros.map((item, index) => (
+          <SwiperSlide key={index} className="relative">
+            <div className="w-[100%] h-[35vw] relative mb-[6px]">
               <Image
                 src={item.img}
                 alt={item.title}
@@ -42,30 +44,26 @@ export const Outro = () => {
                 fill
                 style={{ objectFit: "cover" }}
               />
+              <div className="absolute inset-0 bg-black opacity-50"></div>
             </div>
-            <div className="flex mb-[6px]">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <ReviewStar key={index} className="#FF3EAF" width="14" />
-              ))}
+            <div className="absolute bottom-[7%] left-[7%]">
+              <div className="flex items-center gap-[4px] mb-[12px]">
+                <i className="w-[12px] h-[12px] bg-green-200"></i>
+                <p
+                  className="text12  text-gray-200"
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+                >
+                  {item.miniTitle}
+                </p>
+              </div>
+
+              <p className="title24 text-white  w-[246px]">{item.title}</p>
             </div>
-            <div className="flex items-center gap-[6px] mb-[6px]">
-              <p className="textBold12 bg-blue-300 text-white py-[2px] px-[4px]">
-                BEST
-              </p>
-              <p className="text14">{item.user}</p>
-            </div>
-            <p
-              className="text12"
-              style={{
-                display: "-webkit-box",
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: "vertical",
-                overflow: "hidden",
-              }}
-            >
-              {item.desc}
-            </p>
-            <p className="text12 text-gray-400">{item.date}</p>
           </SwiperSlide>
         ))}
         {/* <div className="swiper-button-next"></div>
