@@ -68,7 +68,7 @@ select {
 /* Theme */
 
 @theme {
-  --primary: #ff7900;
+  --primary: #ff3eaf;
   --primarylight: #ffd27f;
   --primarydark: #cc5a00;
   --primaryaccent: #ff8533;
@@ -102,6 +102,7 @@ select {
 .bg-primary {
   background-color: var(--primary);
 }
+
 .hover\:text-primary:hover {
   color: var(--primary);
 }
@@ -146,6 +147,7 @@ select {
   line-height: auto;
   letter-spacing: -2%;
 }
+
 .text14 {
   font-size: 14px;
   line-height: auto;

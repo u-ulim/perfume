@@ -188,7 +188,7 @@ export const outros = [
   },
   {
     id: 3,
-    miniTitle: "직원들의 추억 소환",
+    miniTitle: "직원들의 추억 소환 시작할게요",
     title: "달콤한 사랑의 추억이 녹아 있는 향수",
     img: `${outroImg03.src}`,
   },
@@ -197,5 +197,115 @@ export const outros = [
     miniTitle: "친구랑 안 겹치는 향수!",
     title: "새내기의 봄을 위한 10만 원 이하 향수",
     img: `${outroImg04.src}`,
+  },
+];
+
+import weekendImg01 from "@/src/assets/home/weekendSection/weekendImg01.jpg";
+import weekendImg02 from "@/src/assets/home/weekendSection/weekendImg02.jpg";
+import weekendImg03 from "@/src/assets/home/weekendSection/weekendImg03.jpg";
+import weekendImg04 from "@/src/assets/home/weekendSection/weekendImg04.jpg";
+import weekendImg05 from "@/src/assets/home/weekendSection/weekendImg05.jpg";
+import weekendImg06 from "@/src/assets/home/weekendSection/weekendImg06.jpg";
+import weekendImg07 from "@/src/assets/home/weekendSection/weekendImg07.jpg";
+import weekendImg08 from "@/src/assets/home/weekendSection/weekendImg08.jpg";
+export const weekends = [
+  {
+    category: "우디",
+    id: 1,
+    brand: "사랑해요",
+    title: "#69 로드 트립 오 드 퍼퓸",
+    price: "168,000",
+    img: `${weekendImg01.src}`,
+    sale: 0,
+  },
+  {
+    category: "시트러스",
+    id: 2,
+    brand: "사랑해요",
+    title: "#71 시리즈 에이 오 드 퍼퓸",
+    price: "168,000",
+    img: `${weekendImg02.src}`,
+    reviewStar: "4.5",
+    reviews: "2",
+    sale: 0,
+  },
+  {
+    category: "머스크",
+    id: 3,
+    brand: "스테파니 브루진",
+    title: "로 드 세비뉴 오 드 코롱",
+    price: "250,000",
+    img: `${weekendImg03.src}`,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "1",
+      },
+    ],
+    sale: 30,
+  },
+  {
+    category: "플로럴",
+    id: 4,
+    brand: "스테파니 브루진",
+    title: "프로메눙 르 당 레 브와 오 드 퍼퓸",
+    price: "250,000",
+    img: `${weekendImg03.src}`,
+    sale: 30,
+  },
+  {
+    category: "스위트",
+    id: 5,
+    brand: "스테파니 브루진",
+    title: "채시미어 오 드 퍼퓸",
+    price: "250,000",
+    img: `${weekendImg05.src}`,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "1",
+      },
+    ],
+    sale: 30,
+  },
+  {
+    category: "우디",
+    id: 6,
+    brand: "스테파니 브루진",
+    title: "델리스 오 드 퍼퓸",
+    price: "250,000",
+    img: `${weekendImg06.src}`,
+    sale: 30,
+  },
+  {
+    category: "우디",
+    id: 7,
+    brand: "사랑해요",
+    title: "#70 베스팅 데이 오 드 퍼퓸",
+    price: "168,000",
+    img: `${weekendImg07.src}`,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "1",
+      },
+    ],
+    sale: 0,
+  },
+  {
+    category: "우디",
+
+    id: 8,
+    brand: "사랑해요",
+    title: "#70 베스팅 데이 오 드 퍼퓸",
+    price: "250,000",
+    img: `${weekendImg08.src}`,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "1",
+      },
+    ],
+    sale: 0,
   },
 ];

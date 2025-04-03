@@ -50,7 +50,7 @@ export const Outro = () => {
               <div className="flex items-center gap-[4px] mb-[12px]">
                 <i className="w-[12px] h-[12px] bg-green-200"></i>
                 <p
-                  className="text12  text-gray-200"
+                  className="text12 text-gray-200"
                   style={{
                     display: "-webkit-box",
                     WebkitLineClamp: 2,

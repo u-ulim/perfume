@@ -17,11 +17,6 @@ export const Review = () => {
       <h1 className="center title56">REVIEW</h1>
       <h2 className="center text12 mb-[40px]">다양한 후기들을 만나보세요.</h2>
       <Swiper
-        modules={[Navigation]}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
         spaceBetween={10}
         slidesPerView={6}
         pagination={{ clickable: true }}
@@ -64,8 +59,6 @@ export const Review = () => {
             <p className="text12 text-gray-400">{item.date}</p>
           </SwiperSlide>
         ))}
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
       </Swiper>
     </section>
   );
