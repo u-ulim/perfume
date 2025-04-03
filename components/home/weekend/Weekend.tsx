@@ -2,6 +2,8 @@
 import React from "react";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const categories = ["우디", "시트러스", "머스크", "플로럴", "스위트"];
@@ -48,11 +50,16 @@ export const Weekend = () => {
     (item) => item.category === selectedCategory
   );
 
+  const router = useRouter();
+  const handleClick = (item: any) => {
+    router.push(`/product?id=${item.id}`);
+  };
+
   return (
     <section className="container h-[20vw] mb-[200px]">
       <h1 className="center title56">WEEKEND BEST</h1>
       <h2 className="center text12 mb-[80px]">
-        가장 많이 팔렸던 향수들을 만나보세요.
+        이번 주 가장 인기가 많았던 향수들
       </h2>
       {/* 카테고리 필터 탭 */}
       <div className="flex gap-2 mb-4">
@@ -73,7 +80,10 @@ export const Weekend = () => {
       <Swiper spaceBetween={16} slidesPerView={6}>
         {filteredPerfumes.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white rounded-xl shadow p-2 text-sm h-[17vw]">
+            <div
+              className="bg-white rounded-xl shadow p-2 text-sm h-[17vw] cursor-pointer"
+              onClick={() => handleClick(item)}
+            >
               <img
                 src={item.img}
                 alt={item.title}

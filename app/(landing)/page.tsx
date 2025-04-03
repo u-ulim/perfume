@@ -10,13 +10,11 @@ import { Weekend } from "@/components/home/weekend/Weekend";
 export default function Home() {
   return (
     <div className="flex flex-col gap-[200px] mb-[200px]">
-      <Header />
       <MainSlider />
       <Weekend />
       <BestSeller />
       <Review />
       <Outro />
-      <Footer />
     </div>
   );
 }
