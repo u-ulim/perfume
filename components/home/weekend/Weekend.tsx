@@ -5,8 +5,9 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Grid } from "swiper/modules";
 
-const categories = ["우디", "시트러스", "머스크", "플로럴", "스위트"];
+const categories = ["전체", "우디", "시트러스", "머스크", "플로럴", "스위트"];
 
 import { weekends } from "@/constants";
 const perfumeData = [
@@ -44,11 +45,12 @@ const perfumeData = [
 ];
 
 export const Weekend = () => {
-  const [selectedCategory, setSelectedCategory] = useState("우디");
+  const [selectedCategory, setSelectedCategory] = useState("전체");
 
-  const filteredPerfumes = weekends.filter(
-    (item) => item.category === selectedCategory
-  );
+  const filteredPerfumes =
+    selectedCategory === "전체"
+      ? weekends
+      : weekends.filter((item) => item.category === selectedCategory);
 
   const router = useRouter();
   const handleClick = (item: any) => {
@@ -56,7 +58,7 @@ export const Weekend = () => {
   };
 
   return (
-    <section className="container h-[20vw] mb-[200px]">
+    <section className="container h-[20vw] mb-[400px]">
       <h1 className="center title56">WEEKEND BEST</h1>
       <h2 className="center text12 mb-[80px]">
         이번 주 가장 인기가 많았던 향수들
@@ -77,11 +79,19 @@ export const Weekend = () => {
       </div>
 
       {/* 슬라이드 */}
-      <Swiper spaceBetween={16} slidesPerView={6}>
+      <Swiper
+        modules={[Grid]}
+        grid={{
+          rows: 2,
+          fill: "row", // 또는 'column'
+        }}
+        spaceBetween={16}
+        slidesPerView={6} // 한 줄에 3개씩
+      >
         {filteredPerfumes.map((item, index) => (
           <SwiperSlide key={index}>
             <div
-              className="bg-white rounded-xl shadow p-2 text-sm h-[17vw] cursor-pointer"
+              className="bg-white rounded-xl shadow p-2 text-sm  cursor-pointer h-[17vw]"
               onClick={() => handleClick(item)}
             >
               <img

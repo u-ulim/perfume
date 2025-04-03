@@ -217,6 +217,12 @@ export const weekends = [
     price: "168,000",
     img: `${weekendImg01.src}`,
     sale: 0,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "2",
+      },
+    ],
   },
   {
     category: "시트러스",
@@ -226,7 +232,12 @@ export const weekends = [
     price: "168,000",
     img: `${weekendImg02.src}`,
     reviewStar: "4.5",
-    reviews: "2",
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "2",
+      },
+    ],
     sale: 0,
   },
   {
@@ -239,7 +250,7 @@ export const weekends = [
     review: [
       {
         reviewStar: "5",
-        reviews: "1",
+        reviews: "2",
       },
     ],
     sale: 30,
@@ -263,7 +274,7 @@ export const weekends = [
     review: [
       {
         reviewStar: "5",
-        reviews: "1",
+        reviews: "4",
       },
     ],
     sale: 30,
@@ -287,7 +298,7 @@ export const weekends = [
     review: [
       {
         reviewStar: "5",
-        reviews: "1",
+        reviews: "2",
       },
     ],
     sale: 0,
@@ -307,5 +318,90 @@ export const weekends = [
       },
     ],
     sale: 0,
+  },
+  {
+    category: "우디",
+    id: 9,
+    brand: "스테파니 브루진",
+    title: "델리스 오 드 퍼퓸",
+    price: "250,000",
+    img: `${weekendImg06.src}`,
+    sale: 30,
+  },
+  {
+    category: "우디",
+    id: 10,
+    brand: "사랑해요",
+    title: "#70 베스팅 데이 오 드 퍼퓸",
+    price: "168,000",
+    img: `${weekendImg07.src}`,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "2",
+      },
+    ],
+    sale: 0,
+  },
+  {
+    category: "우디",
+
+    id: 11,
+    brand: "사랑해요",
+    title: "#70 베스팅 데이 오 드 퍼퓸",
+    price: "250,000",
+    img: `${weekendImg08.src}`,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "1",
+      },
+    ],
+    sale: 0,
+  },
+  {
+    category: "머스크",
+    id: 12,
+    brand: "스테파니 브루진",
+    title: "로 드 세비뉴 오 드 코롱",
+    price: "250,000",
+    img: `${weekendImg03.src}`,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "2",
+      },
+    ],
+    sale: 30,
+  },
+  {
+    category: "머스크",
+    id: 13,
+    brand: "스테파니 브루진",
+    title: "로 드 세비뉴 오 드 코롱",
+    price: "250,000",
+    img: `${weekendImg03.src}`,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "2",
+      },
+    ],
+    sale: 30,
+  },
+  {
+    category: "우디",
+    id: 14,
+    brand: "사랑해요",
+    title: "#69 로드 트립 오 드 퍼퓸",
+    price: "168,000",
+    img: `${weekendImg01.src}`,
+    sale: 0,
+    review: [
+      {
+        reviewStar: "5",
+        reviews: "2",
+      },
+    ],
   },
 ];
