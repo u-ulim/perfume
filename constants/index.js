@@ -223,6 +223,15 @@ export const weekends = [
         reviews: "2",
       },
     ],
+    concentration: "오 드 퍼퓸",
+    mainAccords: "우디 / 아로마틱 / 스파이시",
+    mainNotes: {
+      topNotes: "레몬, 로즈메리",
+      middleNotes: "시더우드, 라벤더",
+      baseNotes: "베티버, 머스크",
+    },
+    scentDescription:
+      "로드 트립을 떠오르게 하는 활기찬 우디 향으로, 상쾌함과 깊이 있는 아로마틱 노트가 조화를 이룹니다.",
   },
   {
     category: "시트러스",
@@ -239,6 +248,15 @@ export const weekends = [
       },
     ],
     sale: 0,
+    concentration: "오 드 퍼퓸",
+    mainAccords: "시트러스 / 그린 / 라이트",
+    mainNotes: {
+      topNotes: "베르가못, 라임",
+      middleNotes: "그린티, 자몽",
+      baseNotes: "화이트 머스크, 앰버",
+    },
+    scentDescription:
+      "#71 시리즈 에이는 상큼한 시트러스 노트로 시작해 부드러운 그린티와 머스크가 자연스럽게 이어지며, 밝고 활기찬 분위기를 연출합니다.",
   },
   {
     category: "머스크",
@@ -254,6 +272,15 @@ export const weekends = [
       },
     ],
     sale: 30,
+    concentration: "오 드 코롱",
+    mainAccords: "머스크 / 파우더리 / 소프트",
+    mainNotes: {
+      topNotes: "만다린, 베르가못",
+      middleNotes: "화이트 플로럴, 이리스",
+      baseNotes: "머스크, 샌달우드",
+    },
+    scentDescription:
+      "부드러운 머스크 향과 산뜻한 시트러스가 어우러져 가볍고 우아하게 퍼지는 오 드 코롱으로, 편안함과 세련미를 동시에 선사합니다.",
   },
   {
     category: "플로럴",
@@ -263,6 +290,15 @@ export const weekends = [
     price: "250,000",
     img: `${weekendImg03.src}`,
     sale: 30,
+    concentration: "오 드 퍼퓸",
+    mainAccords: "플로럴 / 그린 / 프레시",
+    mainNotes: {
+      topNotes: "갈바눔, 피치",
+      middleNotes: "자스민, 튜베로즈",
+      baseNotes: "화이트 머스크, 시더",
+    },
+    scentDescription:
+      "신선한 그린 노트 위에 피어나는 풍성한 플로럴 부케가 부드럽게 퍼지며, 우아하면서도 생기 넘치는 인상을 줍니다.",
   },
   {
     category: "스위트",
@@ -278,6 +314,15 @@ export const weekends = [
       },
     ],
     sale: 30,
+    concentration: "오 드 퍼퓸",
+    mainAccords: "스위트 / 파우더리 / 웜",
+    mainNotes: {
+      topNotes: "배, 복숭아",
+      middleNotes: "바닐라 오키드, 헤리어트",
+      baseNotes: "캐시미어 우드, 앰버, 머스크",
+    },
+    scentDescription:
+      "부드럽고 따뜻한 캐시미어 우드와 달콤한 과일 향이 어우러져 포근하면서도 고급스러운 스위트 무드를 완성합니다.",
   },
   {
     category: "우디",
@@ -287,6 +332,15 @@ export const weekends = [
     price: "250,000",
     img: `${weekendImg06.src}`,
     sale: 30,
+    concentration: "오 드 퍼퓸",
+    mainAccords: "우디 / 오리엔탈 / 스파이시",
+    mainNotes: {
+      topNotes: "카다멈, 핑크 페퍼",
+      middleNotes: "시더우드, 제라늄",
+      baseNotes: "파출리, 앰버",
+    },
+    scentDescription:
+      "오리엔탈 무드의 스파이시 노트가 우디 베이스와 어우러져, 깊이 있고 고급스러운 잔향을 선사하는 퍼퓸입니다.",
   },
   {
     category: "우디",
@@ -302,10 +356,18 @@ export const weekends = [
       },
     ],
     sale: 0,
+    concentration: "오 드 퍼퓸",
+    mainAccords: "우디 / 프레시 / 마린",
+    mainNotes: {
+      topNotes: "레몬, 민트",
+      middleNotes: "파인, 자스민",
+      baseNotes: "오크모스, 앰버",
+    },
+    scentDescription:
+      "시원하면서도 밝은 우디 계열 향으로, 숲속의 싱그러움과 바다 바람의 상쾌함을 동시에 느낄 수 있습니다.",
   },
   {
     category: "우디",
-
     id: 8,
     brand: "사랑해요",
     title: "#70 베스팅 데이 오 드 퍼퓸",
@@ -318,6 +380,15 @@ export const weekends = [
       },
     ],
     sale: 0,
+    concentration: "오 드 퍼퓸",
+    mainAccords: "우디 / 시트러스 / 그린",
+    mainNotes: {
+      topNotes: "베르가못, 파인애플",
+      middleNotes: "갈바눔, 시더우드",
+      baseNotes: "베티버, 화이트 머스크",
+    },
+    scentDescription:
+      "싱그러운 과일의 달콤함과 깊은 우디 노트가 어우러져, 자연 속에 들어선 듯한 깨끗하고 상쾌한 향입니다.",
   },
   {
     category: "우디",
@@ -327,6 +398,15 @@ export const weekends = [
     price: "250,000",
     img: `${weekendImg06.src}`,
     sale: 30,
+    concentration: "오 드 퍼퓸",
+    mainAccords: "우디 / 스파이시 / 따뜻함",
+    mainNotes: {
+      topNotes: "바질, 핑크 페퍼",
+      middleNotes: "시나몬, 라벤더",
+      baseNotes: "샌달우드, 통카빈",
+    },
+    scentDescription:
+      "은은한 허브와 스파이스가 조화를 이루어 깊고 따뜻한 우디 아로마를 선사하며, 기분 좋은 잔향이 오래 지속됩니다.",
   },
   {
     category: "우디",
@@ -342,10 +422,18 @@ export const weekends = [
       },
     ],
     sale: 0,
+    concentration: "오 드 퍼퓸",
+    mainAccords: "우디 / 플로럴 / 소프트",
+    mainNotes: {
+      topNotes: "오렌지 블로섬, 베르가못",
+      middleNotes: "튜베로즈, 바이올렛",
+      baseNotes: "캐시미어 우드, 앰버",
+    },
+    scentDescription:
+      "부드러운 플로럴 노트와 따뜻한 우디 노트가 만나 로맨틱하면서도 차분한 무드를 만들어내는 향입니다.",
   },
   {
     category: "우디",
-
     id: 11,
     brand: "사랑해요",
     title: "#70 베스팅 데이 오 드 퍼퓸",
@@ -358,6 +446,15 @@ export const weekends = [
       },
     ],
     sale: 0,
+    concentration: "오 드 퍼퓸",
+    mainAccords: "우디 / 스모키 / 레더",
+    mainNotes: {
+      topNotes: "아가우드, 인센스",
+      middleNotes: "가죽, 올리바넘",
+      baseNotes: "샌달우드, 파출리",
+    },
+    scentDescription:
+      "깊고 농후한 스모키 우디 베이스 위에 은은한 가죽 향이 감싸며, 고급스럽고 몽환적인 인상을 줍니다.",
   },
   {
     category: "머스크",
@@ -373,6 +470,15 @@ export const weekends = [
       },
     ],
     sale: 30,
+    concentration: "오 드 코롱",
+    mainAccords: "머스크 / 시트러스 / 플로럴",
+    mainNotes: {
+      topNotes: "유자, 라임",
+      middleNotes: "화이트 로즈, 피오니",
+      baseNotes: "크린 머스크, 엠버",
+    },
+    scentDescription:
+      "가벼운 시트러스의 활기찬 시작 후 부드러운 플로럴이 이어지고, 마지막에 깨끗한 머스크가 포근하게 마무리되는 코롱입니다.",
   },
   {
     category: "머스크",
@@ -388,6 +494,15 @@ export const weekends = [
       },
     ],
     sale: 30,
+    concentration: "오 드 코롱",
+    mainAccords: "머스크 / 아쿠아틱 / 프레시",
+    mainNotes: {
+      topNotes: "만다린, 자몽",
+      middleNotes: "워터 재스민, 로즈 페탈",
+      baseNotes: "아쿠아 머스크, 오크모스",
+    },
+    scentDescription:
+      "청량한 아쿠아틱 노트에 머스크가 감싸는 듯 부드럽게 퍼지며, 맑고 산뜻한 매력을 부각하는 오 드 코롱입니다.",
   },
   {
     category: "우디",
@@ -403,5 +518,14 @@ export const weekends = [
         reviews: "2",
       },
     ],
+    concentration: "오 드 퍼퓸",
+    mainAccords: "우디 / 그린 / 허벌",
+    mainNotes: {
+      topNotes: "소나무, 그린 허브",
+      middleNotes: "시더우드, 로즈마리",
+      baseNotes: "베티버, 화이트 머스크",
+    },
+    scentDescription:
+      "푸른 숲길을 걷는 듯한 싱그러움과 자연스러운 우디 노트가 만나, 자유로운 로드 트립의 이미지를 연상시키는 향입니다.",
   },
 ];

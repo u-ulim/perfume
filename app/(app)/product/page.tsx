@@ -16,7 +16,18 @@ export default function ProductPage() {
     return <div className="p-10">해당 상품을 찾을 수 없습니다 😭</div>;
   }
 
-  const { brand, title, price, img, sale, review } = perfume;
+  const {
+    brand,
+    title,
+    price,
+    img,
+    sale,
+    review,
+    concentration,
+    mainAccords,
+    mainNotes,
+    scentDescription,
+  } = perfume;
 
   //할인 가격 계산
   const priceNumber = Number(price.replace(/[^0-9]/g, ""));
@@ -25,7 +36,7 @@ export default function ProductPage() {
     : priceNumber;
 
   return (
-    <section className="max-w-4xl mx-auto p-6">
+    <section className="max-w-4xl mx-auto p-6 pt-[120px]">
       <div className="flex gap-8 flex-col md:flex-row">
         {/* 향수 이미지 */}
         <div className="w-full md:w-1/2">
@@ -56,11 +67,67 @@ export default function ProductPage() {
 
           {/* 리뷰 */}
           {review?.[0] && (
-            <div className="text-yellow-500 text-sm">
+            <div className="text-yellow-500 text-sm mb-[40px]">
               ★ {review[0].reviewStar} / 리뷰 {review[0].reviews}개
             </div>
           )}
 
+          {/* 상세설명 */}
+          <ol className="flex flex-col gap-[30px] mb-[40px]">
+            <li>
+              <h2>[부향률]</h2>
+              <p>- {concentration}</p>
+            </li>
+            <li>
+              <h2>[메인 어코드]</h2>
+              <p>- {mainAccords}</p>
+            </li>
+            <li>
+              <h2>[메인 노트]</h2>
+              <p>- {mainNotes.topNotes}</p>
+              <p>- {mainNotes.middleNotes}</p>
+              <p>- {mainNotes.baseNotes}</p>
+            </li>
+            <li>
+              <h2>[향 설명]</h2>
+              <p>- {scentDescription}</p>
+            </li>
+          </ol>
+
+          {/* 배송관련  */}
+          <div>
+            <div>
+              <i>icon</i>
+            </div>
+            <div>
+              <p>emo: 해외배송비 10,000원</p>
+              <p>emo: 예상배송일 3-5일</p>
+            </div>
+          </div>
+
+          {/* 보상 및 보증 */}
+          <div>
+            <div>
+              <i></i>
+              <div>
+                <p>100% 정품 보증</p>
+                <p>
+                  " "에서 검수한 상품이 정품이 아닐 경우, 구매가의 5배를
+                  보상해요
+                </p>
+              </div>
+            </div>
+            <div>
+              <i></i>
+              <div>
+                <p>엄격한 다중 검수</p>
+                <p>
+                  모든 상품은 검수센터에 도착한 후, 상품별 전문가 그룹의
+                  체계적인 시스템을 거쳐 검수를 진행해요.
+                </p>
+              </div>
+            </div>
+          </div>
           <button className="mt-6 px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
             장바구니에 담기
           </button>
