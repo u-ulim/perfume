@@ -5,6 +5,9 @@ import Image from "next/image";
 import { weekends } from "@/constants";
 
 import React from "react";
+import { DetailDelivery } from "@/components/icon/icon";
+
+import fiveImage from "@/src/assets/detail/five.png";
 
 export default function ProductPage() {
   const searchParams = useSearchParams();
@@ -76,39 +79,47 @@ export default function ProductPage() {
           <ol className="flex flex-col gap-[30px] mb-[40px]">
             <li>
               <h2>[부향률]</h2>
-              <p>- {concentration}</p>
+              <p className="text-gray-500 text14">- {concentration}</p>
             </li>
             <li>
               <h2>[메인 어코드]</h2>
-              <p>- {mainAccords}</p>
+              <p className="text-gray-500 text14">- {mainAccords}</p>
             </li>
             <li>
               <h2>[메인 노트]</h2>
-              <p>- {mainNotes.topNotes}</p>
-              <p>- {mainNotes.middleNotes}</p>
-              <p>- {mainNotes.baseNotes}</p>
+              <p className="text-gray-500 text14">- {mainNotes.topNotes}</p>
+              <p className="text-gray-500 text14">- {mainNotes.middleNotes}</p>
+              <p className="text-gray-500 text14">- {mainNotes.baseNotes}</p>
             </li>
             <li>
               <h2>[향 설명]</h2>
-              <p>- {scentDescription}</p>
+              <p className="text-gray-500 text14">- {scentDescription}</p>
             </li>
           </ol>
 
           {/* 배송관련  */}
-          <div>
+          <div className="flex items-center gap-[16px] mb-[20px]">
             <div>
-              <i>icon</i>
+              <DetailDelivery width="56" />
             </div>
-            <div>
-              <p>emo: 해외배송비 10,000원</p>
-              <p>emo: 예상배송일 3-5일</p>
+            <div className="text14 flex flex-col gap-[6px]">
+              <p>✈️ 해외배송비 10,000원</p>
+              <p>🚚 예상배송일 3-5일</p>
             </div>
           </div>
 
           {/* 보상 및 보증 */}
           <div>
-            <div>
-              <i></i>
+            <div className="flex items-center mb-[20px]">
+              <div className="w-[40px] h-[40px] relative">
+                <Image
+                  src={fiveImage.src}
+                  alt="환불"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+
               <div>
                 <p>100% 정품 보증</p>
                 <p>
@@ -117,8 +128,15 @@ export default function ProductPage() {
                 </p>
               </div>
             </div>
-            <div>
-              <i></i>
+            <div className="flex items-center gap-[16px] mb-[20px]">
+              <div className="w-[40px] h-[40px] relative">
+                <Image
+                  src={fiveImage.src}
+                  alt="환불"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <div>
                 <p>엄격한 다중 검수</p>
                 <p>
