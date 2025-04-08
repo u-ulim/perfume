@@ -12,7 +12,8 @@ export const LoginBar = () => {
       <form action={logout}>
         <button type="submit">logout</button>
       </form>
-      <i>cart</i>
+
+      <Link href="/cart">BAG-0</Link>
     </div>
   );
 };

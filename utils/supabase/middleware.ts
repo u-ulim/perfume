@@ -44,7 +44,7 @@ export async function updateSession(request: NextRequest) {
     !request.nextUrl.pathname.startsWith("/login") &&
     // !request.nextUrl.pathname.startsWith("/auth") &&
     request.nextUrl.pathname !== "/" &&
-    !request.nextUrl.pathname.startsWith("/product") // ← 이 줄 추가!
+    !request.nextUrl.pathname.startsWith("/detail") // ← 이 줄 추가!
   ) {
     // no user, potentially respond by redirecting the user to the login page
     const url = request.nextUrl.clone();

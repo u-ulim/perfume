@@ -54,7 +54,7 @@ export const Weekend = () => {
 
   const router = useRouter();
   const handleClick = (item: any) => {
-    router.push(`/product?id=${item.id}`);
+    router.push(`/detail?id=${item.id}`);
   };
 
   return (

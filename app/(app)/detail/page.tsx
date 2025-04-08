@@ -3,6 +3,11 @@
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { weekends } from "@/constants";
+import Link from "next/link";
+import { useState } from "react";
+
+// Supabase 클라이언트 임포트
+import { supabase } from "@/utils/supabase/client";
 
 import React from "react";
 import { DetailDelivery } from "@/components/icon/icon";
@@ -10,11 +15,13 @@ import { DetailDelivery } from "@/components/icon/icon";
 import fiveImage from "@/src/assets/detail/five.png";
 import detailImage from "@/src/assets/detail/detail.png";
 
-export default function ProductPage() {
+export default function detailPage() {
   const searchParams = useSearchParams();
   const id = Number(searchParams.get("id"));
 
   const perfume = weekends.find((item) => item.id === id);
+
+  const [loading, setLoading] = useState(false);
 
   if (!perfume) {
     return <div className="p-10">해당 상품을 찾을 수 없습니다 😭</div>;
@@ -38,6 +45,32 @@ export default function ProductPage() {
   const discountedPrice = sale
     ? Math.floor(priceNumber * (1 - sale / 100))
     : priceNumber;
+
+  // 장바구니에 담아주는 함수
+  const handleAddToCart = async () => {
+    setLoading(true);
+
+    // Supabase의 cart 테이블에 상품 정보 삽입
+    const { error } = await supabase.from("cart").insert([
+      {
+        // 실제 구현에서는 user_id 등 추가 정보를 함께 넣어야 함
+        product_id: perfume.id,
+        brand,
+        title,
+        price,
+        img: typeof img === "string" ? img : "", // Image 컴포넌트의 경우 URL 처리 방식에 따라 다름
+        quantity: 1,
+      },
+    ]);
+
+    if (error) {
+      console.error("장바구니 추가 오류: ", error.message);
+      alert("장바구니에 담는 중 오류가 발생했습니다. 다시 시도해주세요.");
+    } else {
+      alert("장바구니에 담겼습니다!");
+    }
+    setLoading(false);
+  };
 
   return (
     <section className="max-w-4xl mx-auto p-6 pt-[120px]">
@@ -148,8 +181,13 @@ export default function ProductPage() {
               </div>
             </div>
           </div>
-          <button className="mt-6 px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
-            장바구니에 담기
+          {/* 장바구니에 담기 버튼 */}
+          <button
+            onClick={handleAddToCart}
+            disabled={loading}
+            className="mt-6 px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition disabled:opacity-50"
+          >
+            {loading ? "담는 중..." : "장바구니에 담기"}
           </button>
         </div>
       </div>
