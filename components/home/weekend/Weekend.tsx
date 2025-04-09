@@ -91,7 +91,7 @@ export const Weekend = () => {
         {filteredPerfumes.map((item, index) => (
           <SwiperSlide key={index}>
             <div
-              className="bg-white rounded-xl shadow p-2 text-sm  cursor-pointer h-[17vw]"
+              className="bg-white rounded-xl shadow p-2 text-sm  cursor-pointer min-h-[280px] h-[17vw]"
               onClick={() => handleClick(item)}
             >
               <img
