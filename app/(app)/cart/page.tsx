@@ -35,6 +35,23 @@ export default function CartPage() {
     fetchCart();
   }, []);
 
+  // 풍목 삭제 함수
+  const handleRemoveItem = async (id: number) => {
+    try {
+      const { error } = await supabase.from("cart").delete().eq("id", id);
+      if (error) {
+        console.error("품목 삭제 오류: ", error.message);
+        alert("품목 삭제 중 오류가 발생했습니다. 다시 시도해주세요.");
+        return;
+      }
+      // 삭제 성공 시, 로컬 상태 업데이트
+      setCartItems(cartItems.filter((item) => item.id !== id));
+    } catch (err) {
+      console.error("예상치 못한 오류: ", err);
+      alert("예상치 못한 오류가 발생했습니다.");
+    }
+  };
+
   if (loading) {
     return <div className="p-10">장바구니를 불러오는 중...</div>;
   }
@@ -69,6 +86,14 @@ export default function CartPage() {
                   가격: <span className="font-semibold">{item.price}</span>
                 </p>
                 <p className="text-sm">수량: {item.quantity}</p>
+              </div>
+              <div>
+                <button
+                  onClick={() => handleRemoveItem(item.id)}
+                  className="text-lg"
+                >
+                  ❌
+                </button>
               </div>
             </div>
           ))}
